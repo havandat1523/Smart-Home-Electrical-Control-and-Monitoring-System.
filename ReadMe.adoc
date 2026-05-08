@@ -100,15 +100,19 @@ This provides an intuitive and hands-free method for controlling household elect
 === Folder Structure
 
 ....
- esp32_google_home_relay         => Project root directory
-  ├── SMART_HOME_nov05a.ino      => Main application file
-  ├── wifiConfig.h              => WiFi configuration module
-  ├── OTAUpdate.h               => OTA firmware update module
-  ├── arduino_secrets.h         => Credentials and secrets
-  ├── config.h                  => System configuration parameters
-  ├── sketch.json               => Project metadata
-  ├── thingProperties.h         => Google Home device properties
-  └── ReadMe.adoc               => Project documentation
+.
+├── code/
+│   ├── OTAUpdate.h
+│   ├── SMART_HOME_nov05a.ino
+│   ├── arduino_secrets.h
+│   ├── config.h
+│   ├── sketch.json
+│   ├── thingProperties.h
+│   └── wifiConfig.h
+├── LICENSE
+├── README.md
+├── ReadMe.adoc
+└── version.json
 ....
 
 === License
