@@ -1,0 +1,131 @@
+:Author: Hà Văn Đạt – Dương Hải Đăng – Nguyễn Mạnh Lân
+:School: Học Viện Kỹ Thuật Mật Mã
+:Date: 05/11/2025
+:Revision: version#
+:License: Public Domain
+
+= ESP32-Based 8-Relay Control System via Google Home
+
+This project presents the design and implementation of an IoT-based smart home control system using an ESP32 microcontroller.  
+The system enables users to control eight independent relay channels via Google Home voice commands over the Internet.
+
+Developed as *Project 2*, this work focuses on practical IoT system deployment, emphasizing network connectivity, cloud-based control, remote device management, and firmware maintainability.
+
+The project demonstrates a complete smart home solution, from hardware interfacing to cloud integration and user interaction.
+
+Key objectives of the project include:
+- Designing a stable ESP32-based smart home controller
+- Integrating Google Home for voice-based relay control
+- Implementing WiFi configuration using a captive portal
+- Supporting Over-The-Air (OTA) firmware updates
+- Ensuring safe and reliable control of multiple electrical loads
+
+== Video Demonstration
+
+The following video demonstrates the complete operation of the system, including WiFi configuration, Google Home integration, and real-time control of the relay channels:
+
+.Video demonstration of the ESP32-based smart home system
+image::https://img.youtube.com/vi/WKoqWj-M4CQ/0.jpg[
+  link=https://youtube.com/shorts/WKoqWj-M4CQ?si=giytAHhgmxfHPs2S,
+  width=640,
+  alt="ESP32 Google Home 8-Relay Control System Demo"
+]
+
+== System Overview
+
+The ESP32 acts as the central control unit of the system. After establishing a WiFi connection, it communicates with cloud services that interface with Google Home.  
+Each relay channel is mapped to a virtual smart device, allowing independent or grouped control via voice commands or mobile applications.
+
+The main functional modules of the system include:
+- WiFi configuration and network management
+- Cloud connectivity and Google Home integration
+- Eight-channel relay control logic
+- OTA firmware update mechanism
+- Embedded web server for configuration and monitoring
+- System reliability and recovery handling
+
+== Step 1: Installation and Environment Setup
+
+1. Clone or download this repository to your local computer.
+2. Open the project using the Arduino IDE.
+3. Install the ESP32 board package via the Arduino Board Manager.
+4. Install all required libraries referenced in the source files.
+5. Compile the project to verify that the development environment is correctly configured.
+
+== Step 2: Hardware Assembly
+
+Assemble the hardware components according to the provided design documentation.
+
+Required components:
+- ESP32 development board
+- 8-channel relay module
+- External power supply (5V / 3.3V as required)
+
+Refer to the following files:
+- `schematics.png`: Logical circuit schematic
+- `layout.png`: Physical wiring layout
+
+Ensure proper electrical isolation between the low-voltage ESP32 circuitry and high-voltage relay loads to guarantee operational safety.
+
+== Step 3: WiFi Configuration
+
+On first startup, the ESP32 enters WiFi configuration mode:
+
+1. Connect to the temporary WiFi access point created by the ESP32.
+2. Open a web browser and access the configuration page.
+3. Enter the target WiFi SSID and password.
+4. Save the configuration and reboot the system.
+
+After configuration, the ESP32 will automatically reconnect to the saved network on subsequent startups.
+
+== Step 4: Firmware Upload and OTA Update
+
+The system supports Over-The-Air (OTA) firmware updates:
+
+1. Ensure the ESP32 and the development computer are connected to the same network.
+2. Upload new firmware wirelessly using the configured OTA service.
+3. Monitor the update progress via the Serial Monitor or the web interface.
+
+This feature allows firmware updates without physical access to the device, improving system maintainability.
+
+== Step 5: Google Home Control
+
+After successful network connection and cloud registration:
+- Each relay channel appears as a controllable smart device in Google Home.
+- Users can turn individual relays ON or OFF using voice commands.
+- Multiple relay channels can be grouped and controlled simultaneously.
+
+This provides an intuitive and hands-free method for controlling household electrical devices.
+
+=== Folder Structure
+
+....
+ esp32_google_home_relay         => Project root directory
+  ├── SMART_HOME_nov05a.ino      => Main application file
+  ├── wifiConfig.h              => WiFi configuration module
+  ├── OTAUpdate.h               => OTA firmware update module
+  ├── arduino_secrets.h         => Credentials and secrets
+  ├── config.h                  => System configuration parameters
+  ├── sketch.json               => Project metadata
+  ├── thingProperties.h         => Google Home device properties
+  └── ReadMe.adoc               => Project documentation
+....
+
+=== License
+
+This project is released under the *Public Domain* License.  
+It may be freely used, modified, and distributed for educational and non-commercial purposes.
+
+=== Contributing
+
+Contributions, improvements, and suggestions are welcome.  
+Please contact the project authors for collaboration or further development.
+
+=== BOM (Bill of Materials)
+
+|===
+| ID | Part name              | Part number        | Quantity
+| U1 | ESP32 Dev Module       | ESP32-WROOM        | 1
+| R1 | 8-Channel Relay Module | SRD-12VDC-SL-C     | 1
+| P1 | Power Supply           | 5V / 3.3V          | 1
+|===
