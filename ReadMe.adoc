@@ -22,7 +22,7 @@ Key objectives of the project include:
 
 Video demonstration of the ESP32-based smart home system
 
-[![ESP32 Google Home 8-Relay Control System Demo](https://img.youtube.com/vi/WKoqWj-M4CQ/0.jpg)](https://youtube.com/shorts/WKoqWj-M4CQ?si=giytAHhgmxfHPs2S)
+[![ESP32 Google Home 8-Relay Control System Demo](https://img.youtube.com/vi/WKoqWj-M4CQ/0.jpg)](https://youtube.com/shorts/WKoqWj-M4CQ?si=giytAHhgmxfHPs2S) 
 
 == System Overview
 
