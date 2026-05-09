@@ -20,15 +20,9 @@ Key objectives of the project include:
 - Supporting Over-The-Air (OTA) firmware updates
 - Ensuring safe and reliable control of multiple electrical loads
 
-== Video Demonstration
-
-The following video demonstrates the complete operation of the system, including WiFi configuration, Google Home integration, and real-time control of the relay channels:
-
 Video demonstration of the ESP32-based smart home system
 
-<a href="https://youtube.com/shorts/WKoqWj-M4CQ?si=giytAHhgmxfHPs2S">
-  <img src="https://img.youtube.com/vi/WKoqWj-M4CQ/0.jpg" alt="ESP32 Google Home 8-Relay Control System Demo" width="640">
-</a>
+[![ESP32 Google Home 8-Relay Control System Demo](https://img.youtube.com/vi/WKoqWj-M4CQ/0.jpg)](https://youtube.com/shorts/WKoqWj-M4CQ?si=giytAHhgmxfHPs2S)
 
 == System Overview
 
